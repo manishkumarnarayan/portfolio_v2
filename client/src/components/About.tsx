@@ -20,34 +20,34 @@ export const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="relative py-24 px-4 sm:px-6 max-w-6xl mx-auto scroll-mt-20">
+    <section id="about" className="relative py-16 sm:py-24 px-4 sm:px-6 max-w-6xl mx-auto scroll-mt-20">
       {/* Decorative Glow */}
       <div className="absolute top-1/2 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10 pointer-events-none" />
 
       {/* Section Header */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-10 sm:mb-16">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill border border-amber-400/30 text-amber-300 text-xs font-mono mb-3">
           <Terminal className="w-3.5 h-3.5" />
           <span>About The Developer</span>
         </div>
-        <h2 className="text-3xl sm:text-5xl font-space font-bold text-white tracking-tight">
+        <h2 className="text-2xl xs:text-3xl sm:text-5xl font-space font-bold text-white tracking-tight">
           Designing with <span className="text-gradient-cyan">Purpose</span>, Coding with{' '}
           <span className="text-gradient-amber">Passion</span>
         </h2>
-        <p className="mt-3 text-slate-300 font-raleway max-w-2xl mx-auto text-sm sm:text-base">
+        <p className="mt-2.5 sm:mt-3 text-slate-300 font-raleway max-w-2xl mx-auto text-xs sm:text-base leading-relaxed">
           Get to know my journey, engineering philosophy, and what drives me to build memorable digital products.
         </p>
       </div>
 
       {/* Main Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
         {/* Left Column: Glass Profile Spotlight */}
-        <div className="lg:col-span-5 glass-card-interactive p-6 sm:p-8 rounded-3xl flex flex-col justify-between border border-white/15 shadow-2xl relative overflow-hidden">
+        <div className="lg:col-span-5 glass-card-interactive p-5 sm:p-8 rounded-3xl flex flex-col justify-between border border-white/15 shadow-2xl relative overflow-hidden">
           {/* Subtle Accent Glow */}
           <div className="absolute -top-12 -left-12 w-40 h-40 bg-cyan-400/20 rounded-full blur-2xl pointer-events-none" />
 
           <div>
-            <div className="relative mb-6 mx-auto w-44 h-44 sm:w-52 sm:h-52">
+            <div className="relative mb-5 sm:mb-6 mx-auto w-36 h-36 xs:w-44 xs:h-44 sm:w-52 sm:h-52">
               <div className="absolute -inset-1.5 rounded-3xl bg-gradient-to-tr from-cyan-400 via-emerald-400 to-amber-400 opacity-60 blur-md" />
               <img
                 src={myPhoto}
@@ -59,26 +59,26 @@ export const About: React.FC = () => {
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold font-space text-white text-center">
+            <h3 className="text-xl sm:text-2xl font-bold font-space text-white text-center">
               Manish Kumar Narayan
             </h3>
             <p className="text-xs sm:text-sm text-cyan-400 font-mono text-center mt-1">
               Computer Science Undergraduate & Web Engineer
             </p>
 
-            <p className="text-xs sm:text-sm text-slate-300 font-raleway text-center mt-4 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-300 font-raleway text-center mt-3 sm:mt-4 leading-relaxed">
               "Building fast, responsive, and user-centric applications where design clarity meets reliable engineering."
             </p>
           </div>
 
           {/* Quick Info Grid */}
-          <div className="grid grid-cols-2 gap-3 mt-6 pt-6 border-t border-white/10">
-            <div className="glass-panel-subtle p-3 rounded-xl border border-white/10">
-              <span className="text-[10px] uppercase font-mono text-slate-400 block">Location</span>
+          <div className="grid grid-cols-2 gap-2.5 sm:gap-3 mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-white/10">
+            <div className="glass-panel-subtle p-2.5 sm:p-3 rounded-xl border border-white/10">
+              <span className="text-[9px] sm:text-[10px] uppercase font-mono text-slate-400 block">Location</span>
               <span className="text-xs font-semibold text-white">India (Global Remote)</span>
             </div>
-            <div className="glass-panel-subtle p-3 rounded-xl border border-white/10">
-              <span className="text-[10px] uppercase font-mono text-slate-400 block">Status</span>
+            <div className="glass-panel-subtle p-2.5 sm:p-3 rounded-xl border border-white/10">
+              <span className="text-[9px] sm:text-[10px] uppercase font-mono text-slate-400 block">Status</span>
               <span className="text-xs font-semibold text-emerald-300 flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                 Open to Collabs
@@ -88,13 +88,13 @@ export const About: React.FC = () => {
         </div>
 
         {/* Right Column: Tabbed Content & Stats */}
-        <div className="lg:col-span-7 flex flex-col justify-between gap-6">
+        <div className="lg:col-span-7 flex flex-col justify-between gap-5 sm:gap-6">
           {/* Tabs Selector */}
-          <div className="glass-panel p-1.5 rounded-2xl flex gap-1 border border-white/15">
+          <div className="glass-panel p-1 sm:p-1.5 rounded-2xl flex gap-1 border border-white/15">
             {[
-              { id: 'story', label: 'My Story', icon: Compass },
-              { id: 'philosophy', label: 'Engineering Philosophy', icon: Sparkles },
-              { id: 'education', label: 'Education & Focus', icon: GraduationCap },
+              { id: 'story', label: 'My Story', shortLabel: 'Story', icon: Compass },
+              { id: 'philosophy', label: 'Engineering Philosophy', shortLabel: 'Philosophy', icon: Sparkles },
+              { id: 'education', label: 'Education & Focus', shortLabel: 'Education', icon: GraduationCap },
             ].map((tab) => {
               const Icon = tab.icon;
               const isActive = activeTab === tab.id;
@@ -102,21 +102,22 @@ export const About: React.FC = () => {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as any)}
-                  className={`flex-1 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer ${
+                  className={`flex-1 py-2 sm:py-2.5 px-2 sm:px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer ${
                     isActive
                       ? 'bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-white border border-cyan-400/40 shadow-[0_0_15px_rgba(0,240,255,0.2)]'
                       : 'text-slate-400 hover:text-white hover:bg-white/5'
                   }`}
                 >
-                  <Icon className={`w-4 h-4 ${isActive ? 'text-cyan-400' : 'text-slate-400'}`} />
-                  <span className="truncate">{tab.label}</span>
+                  <Icon className={`w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 ${isActive ? 'text-cyan-400' : 'text-slate-400'}`} />
+                  <span className="sm:hidden text-[11px]">{tab.shortLabel}</span>
+                  <span className="hidden sm:inline truncate">{tab.label}</span>
                 </button>
               );
             })}
           </div>
 
           {/* Tab Content Box */}
-          <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-white/15 shadow-xl min-h-[260px] flex flex-col justify-center">
+          <div className="glass-panel p-5 sm:p-8 rounded-3xl border border-white/15 shadow-xl min-h-[240px] sm:min-h-[260px] flex flex-col justify-center">
             {activeTab === 'story' && (
               <div className="space-y-4 animate-in fade-in duration-300">
                 <h4 className="text-xl font-bold font-space text-white flex items-center gap-2">
@@ -198,16 +199,16 @@ export const About: React.FC = () => {
           </div>
 
           {/* Stats Bar */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
             {stats.map((s, idx) => (
               <div
                 key={idx}
-                className="glass-panel p-4 rounded-2xl border border-white/10 text-center hover:border-cyan-400/40 transition-colors"
+                className="glass-panel p-3 sm:p-4 rounded-2xl border border-white/10 text-center hover:border-cyan-400/40 transition-colors"
               >
-                <div className={`text-2xl sm:text-3xl font-extrabold font-space ${s.highlight}`}>
+                <div className={`text-xl sm:text-3xl font-extrabold font-space ${s.highlight}`}>
                   {s.value}
                 </div>
-                <div className="text-[11px] sm:text-xs text-slate-400 mt-1 font-medium">
+                <div className="text-[10px] sm:text-xs text-slate-400 mt-0.5 sm:mt-1 font-medium">
                   {s.label}
                 </div>
               </div>

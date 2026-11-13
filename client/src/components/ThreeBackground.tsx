@@ -33,21 +33,23 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
     const scene = new THREE.Scene();
     scene.fog = new THREE.FogExp2(0x050914, 0.015);
 
+    const isMobile = window.innerWidth < 768;
+
     const camera = new THREE.PerspectiveCamera(
       60,
       window.innerWidth / window.innerHeight,
       0.1,
       1000
     );
-    camera.position.z = 32;
+    camera.position.z = isMobile ? 36 : 32;
 
     const renderer = new THREE.WebGLRenderer({
       alpha: true,
-      antialias: true,
+      antialias: !isMobile, // Disable MSAA on mobile for maximum battery and fps
       powerPreference: 'high-performance',
     });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1.5 : 2));
     renderer.setClearColor(0x000000, 0); // Transparent to blend with HTML background
     container.appendChild(renderer.domElement);
 
@@ -72,7 +74,7 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
     scene.add(pointLight3);
 
     // 1. DYNAMIC PARTICLE FIELD
-    const particleCount = 2200;
+    const particleCount = isMobile ? 850 : 2200;
     const particleGeometry = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
     const originalPositions = new Float32Array(particleCount * 3);
@@ -158,6 +160,9 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
 
     // 2. CENTRAL FLOATING 3D GEOMETRY (Interactive Wireframe & Crystal Polyhedron)
     const centralGroup = new THREE.Group();
+    if (isMobile) {
+      centralGroup.scale.set(0.72, 0.72, 0.72);
+    }
     mainGroup.add(centralGroup);
 
     // Inner Icosahedron
@@ -261,7 +266,23 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
       targetMouseY = y * 1.5;
     };
 
+    const onTouchMove = (e: TouchEvent) => {
+      if (e.touches && e.touches.length > 0) {
+        const touch = e.touches[0];
+        const x = (touch.clientX / window.innerWidth) * 2 - 1;
+        const y = -(touch.clientY / window.innerHeight) * 2 + 1;
+        targetMouseX = x * 1.2;
+        targetMouseY = y * 1.2;
+      }
+    };
+
+    const onTouchStart = () => {
+      shockwaveTime = 0;
+    };
+
     window.addEventListener('mousemove', onMouseMove, { passive: true });
+    window.addEventListener('touchmove', onTouchMove, { passive: true });
+    window.addEventListener('touchstart', onTouchStart, { passive: true });
 
     // SCROLL PARALLAX
     let scrollY = 0;
@@ -272,10 +293,12 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
 
     // RESIZE LISTENER
     const onResize = () => {
+      const mobileNow = window.innerWidth < 768;
       camera.aspect = window.innerWidth / window.innerHeight;
+      camera.position.z = mobileNow ? 36 : 32;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, mobileNow ? 1.5 : 2));
     };
     window.addEventListener('resize', onResize);
 
@@ -381,6 +404,8 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
     return () => {
       cancelAnimationFrame(animationFrameId);
       window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('touchmove', onTouchMove);
+      window.removeEventListener('touchstart', onTouchStart);
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', onResize);
       window.removeEventListener('click', onClick);
