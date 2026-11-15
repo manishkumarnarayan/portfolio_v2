@@ -76,14 +76,14 @@ export const Hero3DCard: React.FC = () => {
           className="pointer-events-none absolute inset-0 rounded-3xl transition-opacity duration-300 -z-0"
           style={{
             opacity: isInteracting ? 0.35 : 0,
-            background: `radial-gradient(circle at ${glarePos.x}% ${glarePos.y}%, rgba(255,255,255,0.7) 0%, rgba(0,240,255,0.15) 35%, transparent 70%)`,
+            background: `radial-gradient(circle at ${glarePos.x}% ${glarePos.y}%, rgba(255,255,255,0.7) 0%, rgba(79,209,192,0.15) 35%, transparent 70%)`,
           }}
         />
 
         {/* Top Header Row */}
         <div className="flex items-center justify-between mb-4 sm:mb-5" style={{ transform: 'translateZ(30px)' }}>
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#00FFA3]" />
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#93DDB9]" />
             <span className="text-[11px] sm:text-xs font-semibold tracking-wide text-emerald-300 uppercase">Available to Build</span>
           </div>
           <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-[10px] sm:text-[11px] text-cyan-300 font-mono">
@@ -125,7 +125,7 @@ export const Hero3DCard: React.FC = () => {
 
         {/* Info Bio Snippet */}
         <div className="text-center" style={{ transform: 'translateZ(35px)' }}>
-          <h3 className="text-lg sm:text-xl font-bold font-space text-white tracking-wide">
+          <h3 className="text-lg sm:text-xl font-bold font-display text-white tracking-wide">
             Manish Kumar Narayan
           </h3>
           <p className="text-[11px] sm:text-sm text-cyan-300/90 font-mono mt-0.5">
@@ -134,17 +134,17 @@ export const Hero3DCard: React.FC = () => {
 
           <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-white/10 flex justify-around text-center">
             <div>
-              <div className="text-sm sm:text-base font-bold text-white font-space">Real-Time</div>
+              <div className="text-sm sm:text-base font-bold text-white font-display">Real-Time</div>
               <div className="text-[10px] sm:text-[11px] text-slate-400">Architecture</div>
             </div>
             <div className="w-[1px] h-7 sm:h-8 bg-white/10" />
             <div>
-              <div className="text-sm sm:text-base font-bold text-amber-300 font-space">3D & UX</div>
+              <div className="text-sm sm:text-base font-bold text-amber-300 font-display">3D & UX</div>
               <div className="text-[10px] sm:text-[11px] text-slate-400">Interactivity</div>
             </div>
             <div className="w-[1px] h-7 sm:h-8 bg-white/10" />
             <div>
-              <div className="text-sm sm:text-base font-bold text-emerald-300 font-space">Clean</div>
+              <div className="text-sm sm:text-base font-bold text-emerald-300 font-display">Clean</div>
               <div className="text-[10px] sm:text-[11px] text-slate-400">Codebase</div>
             </div>
           </div>

@@ -55,11 +55,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, scrollToSection }
             onClick={() => handleNavClick('hero')}
             className="flex items-center gap-2 group text-left cursor-pointer"
           >
-            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center shadow-[0_0_15px_rgba(0,240,255,0.4)] group-hover:scale-105 transition-transform shrink-0">
-              <span className="font-space font-extrabold text-xs sm:text-sm text-black tracking-tight">MN</span>
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center shadow-[0_0_15px_rgba(79,209,192,0.4)] group-hover:scale-105 transition-transform shrink-0">
+              <span className="font-display font-extrabold text-xs sm:text-sm text-black tracking-tight">MN</span>
             </div>
             <div className="block">
-              <span className="font-space font-bold text-xs sm:text-sm tracking-wide text-white group-hover:text-cyan-300 transition-colors block">
+              <span className="font-display font-bold text-xs sm:text-sm tracking-wide text-white group-hover:text-cyan-300 transition-colors block">
                 Manish Kumar
               </span>
               <span className="text-[9px] sm:text-[10px] block font-mono text-cyan-400/80 -mt-0.5">
@@ -78,7 +78,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, scrollToSection }
                   onClick={() => handleNavClick(item.id)}
                   className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer ${
                     isActive
-                      ? 'bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-300 border border-cyan-400/40 shadow-[0_0_12px_rgba(0,240,255,0.25)]'
+                      ? 'bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-300 border border-cyan-400/40 shadow-[0_0_12px_rgba(79,209,192,0.25)]'
                       : 'text-slate-300 hover:text-white hover:bg-white/10'
                   }`}
                 >
@@ -110,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, scrollToSection }
             </a>
             <button
               onClick={() => handleNavClick('contact')}
-              className="px-4 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 text-black shadow-[0_0_18px_rgba(0,240,255,0.4)] hover:brightness-110 active:scale-95 transition-all flex items-center gap-1 cursor-pointer"
+              className="px-4 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 text-black shadow-[0_0_18px_rgba(79,209,192,0.4)] hover:brightness-110 active:scale-95 transition-all flex items-center gap-1 cursor-pointer"
             >
               <span>Let's Talk</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -152,7 +152,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, scrollToSection }
                 >
                   <span>{item.label}</span>
                   {isActive && (
-                    <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#00F0FF]" />
+                    <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_8px_#4FD1C0]" />
                   )}
                 </button>
               );

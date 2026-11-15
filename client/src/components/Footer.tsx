@@ -12,11 +12,11 @@ export const Footer: React.FC<FooterProps> = ({ scrollToTop }) => {
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5 sm:gap-6">
         {/* Brand / Name */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center font-space font-extrabold text-xs text-black shadow-md shrink-0">
+          <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-cyan-400 to-blue-600 flex items-center justify-center font-display font-extrabold text-xs text-black shadow-md shrink-0">
             MN
           </div>
           <div className="text-left">
-            <span className="font-space font-bold text-sm text-white block">
+            <span className="font-display font-bold text-sm text-white block">
               Manish Kumar Narayan
             </span>
             <span className="text-[10px] sm:text-[11px] font-mono text-slate-400">

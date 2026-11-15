@@ -51,7 +51,7 @@ export const Contact: React.FC = () => {
         particleCount: 80,
         spread: 70,
         origin: { y: 0.6 },
-        colors: ['#00F0FF', '#FFB800', '#00FFA3', '#FFFFFF', '#38BDF8'],
+        colors: ['#4FD1C0', '#FF9580', '#93DDB9', '#FFFFFF', '#6DB8D4'],
       });
 
       // Clear fields
@@ -74,10 +74,10 @@ export const Contact: React.FC = () => {
           <Mail className="w-3.5 h-3.5" />
           <span>Get In Touch</span>
         </div>
-        <h2 className="text-2xl xs:text-3xl sm:text-5xl font-space font-bold text-white tracking-tight">
+        <h2 className="text-2xl xs:text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
           Let's Build Something <span className="text-gradient-cyan">Extraordinary</span>
         </h2>
-        <p className="mt-2.5 sm:mt-3 text-slate-300 font-raleway max-w-xl mx-auto text-xs sm:text-base leading-relaxed">
+        <p className="mt-2.5 sm:mt-3 text-slate-300 font-body max-w-xl mx-auto text-xs sm:text-base leading-relaxed">
           Have an exciting project, internship opportunity, or freelance inquiry? Send a message or connect directly.
         </p>
       </div>
@@ -86,11 +86,11 @@ export const Contact: React.FC = () => {
         {/* Left Column: Direct Info & Social Cards */}
         <div className="lg:col-span-5 flex flex-col justify-between gap-5 sm:gap-6">
           <div className="glass-card-interactive p-5 sm:p-8 rounded-3xl border border-white/15 shadow-2xl">
-            <h3 className="text-lg sm:text-xl font-bold font-space text-white mb-2 flex items-center gap-2">
+            <h3 className="text-lg sm:text-xl font-bold font-display text-white mb-2 flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-amber-400" />
               Direct Communication
             </h3>
-            <p className="text-xs sm:text-sm text-slate-300 font-raleway mb-5 sm:mb-6 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-300 font-body mb-5 sm:mb-6 leading-relaxed">
               I usually respond within a few hours. Feel free to copy my direct email address or ping me on social channels.
             </p>
 
@@ -180,17 +180,17 @@ export const Contact: React.FC = () => {
 
         {/* Right Column: Contact Form */}
         <div className="lg:col-span-7 glass-panel p-5 sm:p-8 rounded-3xl border border-white/15 shadow-2xl relative">
-          <h3 className="text-lg sm:text-xl font-bold font-space text-white mb-4 sm:mb-6">
+          <h3 className="text-lg sm:text-xl font-bold font-display text-white mb-4 sm:mb-6">
             Send a Message
           </h3>
 
           {submitted ? (
             <div className="py-10 sm:py-12 flex flex-col items-center text-center animate-in zoom-in-95 duration-300">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500/20 border border-emerald-400/50 flex items-center justify-center text-emerald-400 mb-4 shadow-[0_0_20px_#00FFA3]">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500/20 border border-emerald-400/50 flex items-center justify-center text-emerald-400 mb-4 shadow-[0_0_20px_#93DDB9]">
                 <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8" />
               </div>
-              <h4 className="text-xl sm:text-2xl font-bold font-space text-white mb-2">Message Sent!</h4>
-              <p className="text-xs sm:text-sm text-slate-300 font-raleway max-w-sm mb-6">
+              <h4 className="text-xl sm:text-2xl font-bold font-display text-white mb-2">Message Sent!</h4>
+              <p className="text-xs sm:text-sm text-slate-300 font-body max-w-sm mb-6">
                 Thank you for reaching out, Manish will get back to you shortly.
               </p>
               <button
@@ -277,7 +277,7 @@ export const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-black shadow-[0_0_20px_rgba(0,240,255,0.4)] hover:brightness-110 active:scale-[0.99] transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 min-h-[46px]"
+                className="w-full py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-black shadow-[0_0_20px_rgba(79,209,192,0.4)] hover:brightness-110 active:scale-[0.99] transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 min-h-[46px]"
               >
                 {isSubmitting ? (
                   <span className="flex items-center gap-2">

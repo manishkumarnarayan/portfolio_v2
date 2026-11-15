@@ -39,24 +39,24 @@ export const ThemeControlDock: React.FC<ThemeControlDockProps> = ({
   const themeOptions: { id: ColorTheme; name: string; color: string; border: string; glow: string }[] = [
     {
       id: 'cyan',
-      name: 'Cyber Cyan',
+      name: 'Deep Teal',
       color: 'from-cyan-400 to-blue-500',
       border: 'border-cyan-400',
-      glow: 'shadow-[0_0_15px_rgba(0,240,255,0.4)]',
+      glow: 'shadow-[0_0_15px_rgba(79,209,192,0.4)]',
     },
     {
       id: 'amber',
-      name: 'Solar Amber',
+      name: 'Coral Dusk',
       color: 'from-amber-400 to-orange-500',
       border: 'border-amber-400',
-      glow: 'shadow-[0_0_15px_rgba(255,184,0,0.4)]',
+      glow: 'shadow-[0_0_15px_rgba(255,149,128,0.4)]',
     },
     {
       id: 'emerald',
-      name: 'Emerald Aurora',
+      name: 'Sage Aurora',
       color: 'from-emerald-400 to-teal-500',
       border: 'border-emerald-400',
-      glow: 'shadow-[0_0_15px_rgba(0,255,163,0.4)]',
+      glow: 'shadow-[0_0_15px_rgba(147,221,185,0.4)]',
     },
   ];
 
@@ -135,7 +135,7 @@ export const ThemeControlDock: React.FC<ThemeControlDockProps> = ({
       {/* Toggle button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="glass-pill px-3.5 sm:px-4 py-2.5 rounded-full flex items-center gap-2 hover:border-cyan-400/60 transition-all duration-300 shadow-xl group hover:shadow-[0_0_20px_rgba(0,240,255,0.3)] active:scale-95 min-h-[42px] cursor-pointer bg-slate-950/80 backdrop-blur-xl border border-white/20"
+        className="glass-pill px-3.5 sm:px-4 py-2.5 rounded-full flex items-center gap-2 hover:border-cyan-400/60 transition-all duration-300 shadow-xl group hover:shadow-[0_0_20px_rgba(79,209,192,0.3)] active:scale-95 min-h-[42px] cursor-pointer bg-slate-950/80 backdrop-blur-xl border border-white/20"
         title="Customize 3D Graphics"
         aria-label="Toggle 3D Controls"
       >

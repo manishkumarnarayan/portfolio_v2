@@ -50,13 +50,13 @@ export function App() {
   };
 
   const themeGlowClass = {
-    cyan: 'bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 shadow-[0_0_15px_#00F0FF]',
-    amber: 'bg-gradient-to-r from-amber-400 via-orange-500 to-amber-300 shadow-[0_0_15px_#FFB800]',
-    emerald: 'bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-300 shadow-[0_0_15px_#00FFA3]',
+    cyan: 'bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-300 shadow-[0_0_15px_#4FD1C0]',
+    amber: 'bg-gradient-to-r from-amber-400 via-orange-500 to-amber-300 shadow-[0_0_15px_#FF9580]',
+    emerald: 'bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-300 shadow-[0_0_15px_#93DDB9]',
   }[currentTheme];
 
   return (
-    <div className="relative min-h-screen text-slate-100 bg-[#050914] selection:bg-cyan-400 selection:text-black overflow-x-hidden">
+    <div className="relative min-h-screen text-slate-100 bg-[#070B0E] selection:bg-cyan-400 selection:text-black overflow-x-hidden">
       {/* Scroll Progress Bar */}
       <div className="fixed top-0 left-0 right-0 h-[3px] z-50 bg-white/5">
         <div

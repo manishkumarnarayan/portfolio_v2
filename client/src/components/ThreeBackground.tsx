@@ -31,7 +31,7 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
 
     // SCENE, CAMERA, RENDERER
     const scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x050914, 0.015);
+    scene.fog = new THREE.FogExp2(0x070b0e, 0.015);
 
     const isMobile = window.innerWidth < 768;
 
@@ -61,15 +61,15 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
     scene.add(ambientLight);
 
-    const pointLight1 = new THREE.PointLight(0x00f0ff, 3, 60);
+    const pointLight1 = new THREE.PointLight(0x4fd1c0, 3, 60);
     pointLight1.position.set(15, 15, 15);
     scene.add(pointLight1);
 
-    const pointLight2 = new THREE.PointLight(0xffb800, 2, 60);
+    const pointLight2 = new THREE.PointLight(0xff9580, 2, 60);
     pointLight2.position.set(-15, -15, 10);
     scene.add(pointLight2);
 
-    const pointLight3 = new THREE.PointLight(0x00ffa3, 2, 50);
+    const pointLight3 = new THREE.PointLight(0x93ddb9, 2, 50);
     pointLight3.position.set(0, 20, -10);
     scene.add(pointLight3);
 
@@ -83,21 +83,21 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
 
     const colorPalettes = {
       cyan: [
-        new THREE.Color(0x00f0ff),
-        new THREE.Color(0x38bdf8),
-        new THREE.Color(0x0284c7),
+        new THREE.Color(0x4fd1c0),
+        new THREE.Color(0x6db8d4),
+        new THREE.Color(0x33789b),
         new THREE.Color(0xffffff),
       ],
       amber: [
-        new THREE.Color(0xffb800),
-        new THREE.Color(0xf59e0b),
-        new THREE.Color(0xff5e3a),
+        new THREE.Color(0xff9580),
+        new THREE.Color(0xf7735c),
+        new THREE.Color(0xe8604a),
         new THREE.Color(0xffedd5),
       ],
       emerald: [
-        new THREE.Color(0x00ffa3),
-        new THREE.Color(0x10b981),
-        new THREE.Color(0x06b6d4),
+        new THREE.Color(0x93ddb9),
+        new THREE.Color(0x63c597),
+        new THREE.Color(0x2bb5a4),
         new THREE.Color(0xf0fdf4),
       ],
     };
@@ -168,8 +168,8 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
     // Inner Icosahedron
     const icoGeom = new THREE.IcosahedronGeometry(7.5, 1);
     const icoMat = new THREE.MeshPhysicalMaterial({
-      color: 0x0a192f,
-      emissive: 0x00f0ff,
+      color: 0x0d1c20,
+      emissive: 0x4fd1c0,
       emissiveIntensity: 0.25,
       metalness: 0.9,
       roughness: 0.1,
@@ -183,7 +183,7 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
     // Wireframe overlay for glowing cyber aesthetic
     const wireGeom = new THREE.WireframeGeometry(icoGeom);
     const wireMat = new THREE.LineBasicMaterial({
-      color: 0x00f0ff,
+      color: 0x4fd1c0,
       transparent: true,
       opacity: 0.6,
       blending: THREE.AdditiveBlending,
@@ -194,7 +194,7 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
     // Outer Orbiting Rings (Gyroscopic Torus Rings)
     const ring1Geom = new THREE.TorusGeometry(12, 0.08, 16, 100);
     const ring1Mat = new THREE.MeshBasicMaterial({
-      color: 0x00ffa3,
+      color: 0x93ddb9,
       transparent: true,
       opacity: 0.5,
       blending: THREE.AdditiveBlending,
@@ -205,7 +205,7 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
 
     const ring2Geom = new THREE.TorusGeometry(14.5, 0.06, 16, 100);
     const ring2Mat = new THREE.MeshBasicMaterial({
-      color: 0xffb800,
+      color: 0xff9580,
       transparent: true,
       opacity: 0.45,
       blending: THREE.AdditiveBlending,
@@ -226,8 +226,8 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
     for (let i = 0; i < 6; i++) {
       const geom = satGeometries[i % satGeometries.length];
       const mat = new THREE.MeshStandardMaterial({
-        color: i % 2 === 0 ? 0x00f0ff : 0xffb800,
-        emissive: i % 2 === 0 ? 0x005577 : 0x773300,
+        color: i % 2 === 0 ? 0x4fd1c0 : 0xff9580,
+        emissive: i % 2 === 0 ? 0x0f5a52 : 0x7a3426,
         metalness: 0.85,
         roughness: 0.2,
         wireframe: i % 3 === 0,
@@ -327,17 +327,17 @@ export const ThreeBackground: React.FC<ThreeBackgroundProps> = ({
       // Dynamic theme color update on materials
       const theme = themeRef.current;
       if (theme === 'cyan') {
-        icoMat.emissive.setHex(0x00f0ff);
-        wireMat.color.setHex(0x00f0ff);
-        pointLight1.color.setHex(0x00f0ff);
+        icoMat.emissive.setHex(0x4fd1c0);
+        wireMat.color.setHex(0x4fd1c0);
+        pointLight1.color.setHex(0x4fd1c0);
       } else if (theme === 'amber') {
-        icoMat.emissive.setHex(0xffb800);
-        wireMat.color.setHex(0xffb800);
-        pointLight1.color.setHex(0xffb800);
+        icoMat.emissive.setHex(0xff9580);
+        wireMat.color.setHex(0xff9580);
+        pointLight1.color.setHex(0xff9580);
       } else if (theme === 'emerald') {
-        icoMat.emissive.setHex(0x00ffa3);
-        wireMat.color.setHex(0x00ffa3);
-        pointLight1.color.setHex(0x00ffa3);
+        icoMat.emissive.setHex(0x93ddb9);
+        wireMat.color.setHex(0x93ddb9);
+        pointLight1.color.setHex(0x93ddb9);
       }
 
       // Rotate central cluster

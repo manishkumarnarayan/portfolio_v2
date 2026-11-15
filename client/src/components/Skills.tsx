@@ -41,7 +41,7 @@ export const Skills: React.FC = () => {
       frontSummary: 'Custom hooks, state management, router architecture, and high-performance UI rendering.',
       details: ['Hooks & Custom Hooks', 'Context API & State', 'SPA & App Routing', 'Performance Optimization'],
       color: 'from-cyan-400 to-blue-500',
-      borderGlow: 'hover:border-cyan-400/60 hover:shadow-[0_0_25px_rgba(0,240,255,0.25)]',
+      borderGlow: 'hover:border-cyan-400/60 hover:shadow-[0_0_25px_rgba(79,209,192,0.25)]',
     },
     {
       id: 'typescript',
@@ -52,7 +52,7 @@ export const Skills: React.FC = () => {
       frontSummary: 'Strict typing, robust interfaces, refactor resilience, and clean scalable application code.',
       details: ['Strict Type Safety', 'Generic Interfaces', 'Full-stack Types', 'Modern TS Tooling'],
       color: 'from-blue-400 to-indigo-500',
-      borderGlow: 'hover:border-blue-400/60 hover:shadow-[0_0_25px_rgba(59,130,246,0.25)]',
+      borderGlow: 'hover:border-blue-400/60 hover:shadow-[0_0_25px_rgba(75,151,186,0.25)]',
     },
     {
       id: 'js-html-css',
@@ -63,7 +63,7 @@ export const Skills: React.FC = () => {
       frontSummary: 'Interactive DOM manipulation, semantic modern markup, and responsive fluid layouts.',
       details: ['ESNext Modern Syntax', 'Interactive UI Logic', 'Semantic & Accessible HTML', 'Modern CSS & Glassmorphism'],
       color: 'from-amber-400 to-yellow-500',
-      borderGlow: 'hover:border-amber-400/60 hover:shadow-[0_0_25px_rgba(255,184,0,0.25)]',
+      borderGlow: 'hover:border-amber-400/60 hover:shadow-[0_0_25px_rgba(255,149,128,0.25)]',
     },
     {
       id: 'threejs',
@@ -74,7 +74,7 @@ export const Skills: React.FC = () => {
       frontSummary: 'WebGL 3D scenes, particle simulations, dynamic lighting, and camera parallax math.',
       details: ['WebGL Mesh & Shaders', 'Particle Constellations', 'Interactive Mouse Parallax', 'Physics & Animation Loops'],
       color: 'from-emerald-400 to-teal-500',
-      borderGlow: 'hover:border-emerald-400/60 hover:shadow-[0_0_25px_rgba(0,255,163,0.25)]',
+      borderGlow: 'hover:border-emerald-400/60 hover:shadow-[0_0_25px_rgba(147,221,185,0.25)]',
     },
     {
       id: 'python',
@@ -85,7 +85,7 @@ export const Skills: React.FC = () => {
       frontSummary: 'Backend application development, automation scripts, data handling, and API integration.',
       details: ['Backend REST APIs', 'Data Processing & Logic', 'Workflow Automation', 'Algorithm Implementation'],
       color: 'from-cyan-400 to-emerald-400',
-      borderGlow: 'hover:border-cyan-400/60 hover:shadow-[0_0_25px_rgba(6,182,212,0.25)]',
+      borderGlow: 'hover:border-cyan-400/60 hover:shadow-[0_0_25px_rgba(43,181,164,0.25)]',
     },
     {
       id: 'sql',
@@ -96,7 +96,7 @@ export const Skills: React.FC = () => {
       frontSummary: 'Database schema design, queries, relational indexing, and secure data storage.',
       details: ['Relational Data Modeling', 'Complex Querying', 'CRUD & Integrity', 'Database Security'],
       color: 'from-amber-400 to-orange-500',
-      borderGlow: 'hover:border-amber-400/60 hover:shadow-[0_0_25px_rgba(245,158,11,0.25)]',
+      borderGlow: 'hover:border-amber-400/60 hover:shadow-[0_0_25px_rgba(247,115,92,0.25)]',
     },
     {
       id: 'java',
@@ -107,7 +107,7 @@ export const Skills: React.FC = () => {
       frontSummary: 'Robust backend and software applications using core OOP principles and strong architecture.',
       details: ['Object-Oriented Architecture', 'Design Patterns', 'Data Structures & Algorithms', 'Backend Applications'],
       color: 'from-orange-400 to-red-500',
-      borderGlow: 'hover:border-orange-400/60 hover:shadow-[0_0_25px_rgba(255,94,58,0.25)]',
+      borderGlow: 'hover:border-orange-400/60 hover:shadow-[0_0_25px_rgba(247,115,92,0.25)]',
     },
     {
       id: 'git',
@@ -131,7 +131,7 @@ export const Skills: React.FC = () => {
       frontSummary: 'Continuous deployment pipelines, domain configuration, serverless routes, and speed optimization.',
       details: ['Production CI/CD Pipelines', 'Edge Network Routing', 'Zero-Downtime Deploys', 'Environment Configurations'],
       color: 'from-cyan-300 to-teal-400',
-      borderGlow: 'hover:border-cyan-300/60 hover:shadow-[0_0_25px_rgba(0,240,255,0.25)]',
+      borderGlow: 'hover:border-cyan-300/60 hover:shadow-[0_0_25px_rgba(79,209,192,0.25)]',
     },
     {
       id: 'ai-agents',
@@ -142,7 +142,7 @@ export const Skills: React.FC = () => {
       frontSummary: 'Prompt engineering and agentic workflows utilizing Claude, ChatGPT, and Gemini APIs.',
       details: ['Agentic Task Automation', 'Claude, Gemini & GPT Workflows', 'Prompt Engineering', 'API Integration'],
       color: 'from-amber-400 to-emerald-400',
-      borderGlow: 'hover:border-amber-400/60 hover:shadow-[0_0_25px_rgba(255,184,0,0.25)]',
+      borderGlow: 'hover:border-amber-400/60 hover:shadow-[0_0_25px_rgba(255,149,128,0.25)]',
     },
   ];
 
@@ -165,11 +165,11 @@ export const Skills: React.FC = () => {
           <Code2 className="w-3.5 h-3.5" />
           <span>Core Competencies</span>
         </div>
-        <h2 className="text-2xl xs:text-3xl sm:text-5xl font-space font-bold text-white tracking-tight">
+        <h2 className="text-2xl xs:text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
           Technical <span className="text-gradient-cyan">Skillset</span> &{' '}
           <span className="text-gradient-emerald">Capabilities</span>
         </h2>
-        <p className="mt-2.5 sm:mt-3 text-slate-300 font-raleway max-w-2xl mx-auto text-xs sm:text-base leading-relaxed">
+        <p className="mt-2.5 sm:mt-3 text-slate-300 font-body max-w-2xl mx-auto text-xs sm:text-base leading-relaxed">
           Interactive cards: Click or tap any card to flip and discover architectural details and applications.
         </p>
 
@@ -187,7 +187,7 @@ export const Skills: React.FC = () => {
               onClick={() => setFilter(tab.id as any)}
               className={`px-3.5 sm:px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 cursor-pointer shrink-0 ${
                 filter === tab.id
-                  ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-black shadow-[0_0_15px_rgba(0,240,255,0.4)]'
+                  ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-black shadow-[0_0_15px_rgba(79,209,192,0.4)]'
                   : 'glass-panel-subtle text-slate-300 hover:text-white hover:bg-white/10'
               }`}
             >
@@ -229,13 +229,13 @@ export const Skills: React.FC = () => {
                       </div>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-bold font-space text-white group-hover:text-cyan-300 transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold font-display text-white group-hover:text-cyan-300 transition-colors">
                       {skill.name}
                     </h3>
                     <p className="text-[11px] sm:text-xs font-mono text-cyan-400/90 mt-0.5">
                       {skill.tagline}
                     </p>
-                    <p className="text-xs text-slate-300 font-raleway mt-2 sm:mt-3 line-clamp-3 leading-relaxed">
+                    <p className="text-xs text-slate-300 font-body mt-2 sm:mt-3 line-clamp-3 leading-relaxed">
                       {skill.frontSummary}
                     </p>
                   </div>
@@ -256,7 +256,7 @@ export const Skills: React.FC = () => {
                 >
                   <div>
                     <div className="flex items-center justify-between pb-2 mb-2 sm:mb-3 border-b border-white/10">
-                      <h4 className="text-sm sm:text-base font-bold font-space text-white flex items-center gap-1.5">
+                      <h4 className="text-sm sm:text-base font-bold font-display text-white flex items-center gap-1.5">
                         <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400" />
                         {skill.name}
                       </h4>
@@ -297,7 +297,7 @@ export const Skills: React.FC = () => {
       </div>
 
       <div className="mt-12 text-center">
-        <p className="text-xs sm:text-sm font-raleway text-slate-400 max-w-xl mx-auto">
+        <p className="text-xs sm:text-sm font-body text-slate-400 max-w-xl mx-auto">
           "Constantly evolving and mastering new frameworks, libraries, and AI technologies to build higher-fidelity web applications."
         </p>
       </div>

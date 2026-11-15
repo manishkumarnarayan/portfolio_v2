@@ -82,7 +82,7 @@ export const Projects: React.FC = () => {
         'A next-generation interactive web portfolio built with React.ts, Three.js, and custom physics-based lighting shaders. Featuring glassmorphism aesthetics, an interactive 3D particle constellation, and vibrant luminous palettes.',
       keyFeatures: [
         'Full-screen interactive Three.js 3D scene with mouse inertia',
-        'Real-time 3D theme switcher (Cyber Cyan, Solar Amber, Emerald Aurora)',
+        'Real-time 3D theme switcher (Deep Teal, Coral Dusk, Sage Aurora)',
         'Gyroscopic 3D tilt cards with dynamic specular glare',
         'Zero purple generic gradients - bespoke luminous color palette',
       ],
@@ -104,11 +104,11 @@ export const Projects: React.FC = () => {
           <FolderGit2 className="w-3.5 h-3.5" />
           <span>Proven Work & Deployments</span>
         </div>
-        <h2 className="text-2xl xs:text-3xl sm:text-5xl font-space font-bold text-white tracking-tight">
+        <h2 className="text-2xl xs:text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
           Featured <span className="text-gradient-cyan">Projects</span> &{' '}
           <span className="text-gradient-amber">Creations</span>
         </h2>
-        <p className="mt-2.5 sm:mt-3 text-slate-300 font-raleway max-w-2xl mx-auto text-xs sm:text-base leading-relaxed">
+        <p className="mt-2.5 sm:mt-3 text-slate-300 font-body max-w-2xl mx-auto text-xs sm:text-base leading-relaxed">
           Real-world products engineered for fast communication, user privacy, and high-impact web interactions.
         </p>
       </div>
@@ -139,7 +139,7 @@ export const Projects: React.FC = () => {
                       </span>
                     </div>
 
-                    <h3 className="text-xl sm:text-3xl font-bold font-space text-white group-hover:text-cyan-300 transition-colors flex items-center gap-2 sm:gap-2.5">
+                    <h3 className="text-xl sm:text-3xl font-bold font-display text-white group-hover:text-cyan-300 transition-colors flex items-center gap-2 sm:gap-2.5">
                       <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400 shrink-0" />
                       {project.name}
                     </h3>
@@ -148,7 +148,7 @@ export const Projects: React.FC = () => {
                       {project.tagline}
                     </p>
 
-                    <p className="text-slate-300 text-xs sm:text-base font-raleway leading-relaxed mb-4 sm:mb-6">
+                    <p className="text-slate-300 text-xs sm:text-base font-body leading-relaxed mb-4 sm:mb-6">
                       {project.description}
                     </p>
 
@@ -182,7 +182,7 @@ export const Projects: React.FC = () => {
                         href={project.liveLink}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex-1 sm:flex-initial px-4 sm:px-5 py-3 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm bg-gradient-to-r from-cyan-400 to-blue-500 text-black shadow-[0_0_15px_rgba(0,240,255,0.4)] hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                        className="flex-1 sm:flex-initial px-4 sm:px-5 py-3 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm bg-gradient-to-r from-cyan-400 to-blue-500 text-black shadow-[0_0_15px_rgba(79,209,192,0.4)] hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
                       >
                         <span>Open Live App</span>
                         <ArrowUpRight className="w-4 h-4" />
@@ -233,7 +233,7 @@ export const Projects: React.FC = () => {
                       <div className={`p-3 sm:p-4 rounded-2xl bg-gradient-to-tr ${project.accentColor} text-black mb-2 sm:mb-3 shadow-lg z-10 group-hover:rotate-6 transition-transform duration-300`}>
                         <Icon className="w-6 h-6 sm:w-8 sm:h-8" />
                       </div>
-                      <span className="font-space font-bold text-base sm:text-lg text-white z-10">
+                      <span className="font-display font-bold text-base sm:text-lg text-white z-10">
                         {project.name}
                       </span>
                       <span className="text-[11px] sm:text-xs text-slate-300 font-mono mt-0.5 sm:mt-1 z-10 max-w-[240px]">
@@ -271,12 +271,12 @@ export const Projects: React.FC = () => {
                 {React.createElement(selectedProject.icon, { className: 'w-5 h-5 sm:w-6 sm:h-6' })}
               </div>
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold font-space text-white">{selectedProject.name}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold font-display text-white">{selectedProject.name}</h3>
                 <p className="text-xs font-mono text-cyan-300">{selectedProject.tagline}</p>
               </div>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-300 font-raleway leading-relaxed mb-5 sm:mb-6">
+            <p className="text-xs sm:text-sm text-slate-300 font-body leading-relaxed mb-5 sm:mb-6">
               {selectedProject.description}
             </p>
 

@@ -30,11 +30,11 @@ export const About: React.FC = () => {
           <Terminal className="w-3.5 h-3.5" />
           <span>About The Developer</span>
         </div>
-        <h2 className="text-2xl xs:text-3xl sm:text-5xl font-space font-bold text-white tracking-tight">
+        <h2 className="text-2xl xs:text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
           Designing with <span className="text-gradient-cyan">Purpose</span>, Coding with{' '}
           <span className="text-gradient-amber">Passion</span>
         </h2>
-        <p className="mt-2.5 sm:mt-3 text-slate-300 font-raleway max-w-2xl mx-auto text-xs sm:text-base leading-relaxed">
+        <p className="mt-2.5 sm:mt-3 text-slate-300 font-body max-w-2xl mx-auto text-xs sm:text-base leading-relaxed">
           Get to know my journey, engineering philosophy, and what drives me to build memorable digital products.
         </p>
       </div>
@@ -59,14 +59,14 @@ export const About: React.FC = () => {
               </div>
             </div>
 
-            <h3 className="text-xl sm:text-2xl font-bold font-space text-white text-center">
+            <h3 className="text-xl sm:text-2xl font-bold font-display text-white text-center">
               Manish Kumar Narayan
             </h3>
             <p className="text-xs sm:text-sm text-cyan-400 font-mono text-center mt-1">
               Computer Science Undergraduate & Web Engineer
             </p>
 
-            <p className="text-xs sm:text-sm text-slate-300 font-raleway text-center mt-3 sm:mt-4 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-300 font-body text-center mt-3 sm:mt-4 leading-relaxed">
               "Building fast, responsive, and user-centric applications where design clarity meets reliable engineering."
             </p>
           </div>
@@ -104,7 +104,7 @@ export const About: React.FC = () => {
                   onClick={() => setActiveTab(tab.id as any)}
                   className={`flex-1 py-2 sm:py-2.5 px-2 sm:px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer ${
                     isActive
-                      ? 'bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-white border border-cyan-400/40 shadow-[0_0_15px_rgba(0,240,255,0.2)]'
+                      ? 'bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-white border border-cyan-400/40 shadow-[0_0_15px_rgba(79,209,192,0.2)]'
                       : 'text-slate-400 hover:text-white hover:bg-white/5'
                   }`}
                 >
@@ -120,14 +120,14 @@ export const About: React.FC = () => {
           <div className="glass-panel p-5 sm:p-8 rounded-3xl border border-white/15 shadow-xl min-h-[240px] sm:min-h-[260px] flex flex-col justify-center">
             {activeTab === 'story' && (
               <div className="space-y-4 animate-in fade-in duration-300">
-                <h4 className="text-xl font-bold font-space text-white flex items-center gap-2">
+                <h4 className="text-xl font-bold font-display text-white flex items-center gap-2">
                   <Rocket className="w-5 h-5 text-cyan-400" />
                   Passionate About Code & Creativity
                 </h4>
-                <p className="text-sm sm:text-base text-slate-300 font-raleway leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-300 font-body leading-relaxed">
                   I'm a Computer Science student and frontend developer who enjoys building fast, responsive, and user-friendly web applications.
                 </p>
-                <p className="text-sm sm:text-base text-slate-300 font-raleway leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-300 font-body leading-relaxed">
                   I focus on clean design, thoughtful interactions, and writing code that's as maintainable as it is functional. I'm always exploring new technologies and looking for opportunities to turn ideas into meaningful digital experiences.
                 </p>
                 <div className="pt-2 flex flex-wrap gap-2">
@@ -145,25 +145,25 @@ export const About: React.FC = () => {
 
             {activeTab === 'philosophy' && (
               <div className="space-y-4 animate-in fade-in duration-300">
-                <h4 className="text-xl font-bold font-space text-white flex items-center gap-2">
+                <h4 className="text-xl font-bold font-display text-white flex items-center gap-2">
                   <Sparkles className="w-5 h-5 text-amber-400" />
                   Simple • Elegant • Functional
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
                   <div className="glass-panel-subtle p-3.5 rounded-xl border border-white/10">
-                    <span className="font-space font-bold text-white text-sm block mb-1">01. Simple</span>
+                    <span className="font-display font-bold text-white text-sm block mb-1">01. Simple</span>
                     <p className="text-xs text-slate-300">
                       Eliminating clutter so users can achieve their intent without friction.
                     </p>
                   </div>
                   <div className="glass-panel-subtle p-3.5 rounded-xl border border-white/10">
-                    <span className="font-space font-bold text-amber-300 text-sm block mb-1">02. Elegant</span>
+                    <span className="font-display font-bold text-amber-300 text-sm block mb-1">02. Elegant</span>
                     <p className="text-xs text-slate-300">
                       Harmonious visual hierarchy, glassmorphism, and responsive micro-interactions.
                     </p>
                   </div>
                   <div className="glass-panel-subtle p-3.5 rounded-xl border border-white/10">
-                    <span className="font-space font-bold text-emerald-300 text-sm block mb-1">03. Functional</span>
+                    <span className="font-display font-bold text-emerald-300 text-sm block mb-1">03. Functional</span>
                     <p className="text-xs text-slate-300">
                       Rock-solid reliability, fast load times, and maintainable type-safe code.
                     </p>
@@ -174,14 +174,14 @@ export const About: React.FC = () => {
 
             {activeTab === 'education' && (
               <div className="space-y-4 animate-in fade-in duration-300">
-                <h4 className="text-xl font-bold font-space text-white flex items-center gap-2">
+                <h4 className="text-xl font-bold font-display text-white flex items-center gap-2">
                   <GraduationCap className="w-5 h-5 text-emerald-400" />
                   Academic Foundation & Continuous Learning
                 </h4>
                 <div className="glass-panel-subtle p-4 rounded-xl border border-white/10">
                   <div className="flex justify-between items-start">
                     <div>
-                      <h5 className="font-space font-semibold text-white text-base">
+                      <h5 className="font-display font-semibold text-white text-base">
                         Computer Science & Engineering
                       </h5>
                       <p className="text-xs font-mono text-cyan-300">Undergraduate Degree Program</p>
@@ -205,7 +205,7 @@ export const About: React.FC = () => {
                 key={idx}
                 className="glass-panel p-3 sm:p-4 rounded-2xl border border-white/10 text-center hover:border-cyan-400/40 transition-colors"
               >
-                <div className={`text-xl sm:text-3xl font-extrabold font-space ${s.highlight}`}>
+                <div className={`text-xl sm:text-3xl font-extrabold font-display ${s.highlight}`}>
                   {s.value}
                 </div>
                 <div className="text-[10px] sm:text-xs text-slate-400 mt-0.5 sm:mt-1 font-medium">
