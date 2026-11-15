@@ -69,7 +69,7 @@ export const Hero3DCard: React.FC = () => {
           transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
           transition: isInteracting ? 'transform 0.08s ease-out' : 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
         }}
-        className="preserve-3d relative w-full rounded-3xl p-5 sm:p-7 glass-card-interactive border border-white/20 shadow-2xl cursor-pointer overflow-hidden group select-none"
+        className="preserve-3d relative w-full rounded-3xl p-5 sm:p-7 glass-card-interactive border border-ink/20 shadow-2xl cursor-pointer overflow-hidden group select-none"
       >
         {/* Dynamic Glare Reflection Layer */}
         <div
@@ -84,9 +84,9 @@ export const Hero3DCard: React.FC = () => {
         <div className="flex items-center justify-between mb-4 sm:mb-5" style={{ transform: 'translateZ(30px)' }}>
           <div className="flex items-center gap-2">
             <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#93DDB9]" />
-            <span className="text-[11px] sm:text-xs font-semibold tracking-wide text-emerald-300 uppercase">Available to Build</span>
+            <span className="text-[11px] sm:text-xs font-semibold tracking-wide text-ink uppercase">Available to Build</span>
           </div>
-          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-[10px] sm:text-[11px] text-cyan-300 font-mono">
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-ink/10 border border-ink/15 text-[10px] sm:text-[11px] text-ink font-mono">
             <Terminal className="w-3 h-3" />
             <span>manish.dev</span>
           </div>
@@ -100,52 +100,52 @@ export const Hero3DCard: React.FC = () => {
             <img
               src={myPhoto}
               alt="Manish Kumar Narayan"
-              className="relative w-40 h-40 xs:w-48 xs:h-48 sm:w-56 sm:h-56 object-cover rounded-2xl shadow-xl border-2 border-white/30"
+              className="relative w-40 h-40 xs:w-48 xs:h-48 sm:w-56 sm:h-56 object-cover rounded-2xl shadow-xl border-2 border-ink/30"
             />
           </div>
 
           {/* Floating Tag 1: React.ts */}
           <div
-            className="absolute left-0 sm:-left-3 top-4 sm:top-6 glass-pill px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-cyan-400/40 shadow-lg flex items-center gap-1.5 text-[11px] sm:text-xs text-white"
+            className="absolute left-0 sm:-left-3 top-4 sm:top-6 glass-pill px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-cyan-400/40 shadow-lg flex items-center gap-1.5 text-[11px] sm:text-xs text-ink"
             style={{ transform: 'translateZ(60px)' }}
           >
-            <Code2 className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-cyan-400" />
+            <Code2 className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-cyan-600" />
             <span className="font-semibold">React + TS</span>
           </div>
 
           {/* Floating Tag 2: Python / AI */}
           <div
-            className="absolute right-0 sm:-right-3 bottom-4 sm:bottom-6 glass-pill px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-amber-400/40 shadow-lg flex items-center gap-1.5 text-[11px] sm:text-xs text-white"
+            className="absolute right-0 sm:-right-3 bottom-4 sm:bottom-6 glass-pill px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-amber-400/40 shadow-lg flex items-center gap-1.5 text-[11px] sm:text-xs text-ink"
             style={{ transform: 'translateZ(65px)' }}
           >
-            <Cpu className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-amber-400" />
+            <Cpu className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-amber-600" />
             <span className="font-semibold">Python & AI</span>
           </div>
         </div>
 
         {/* Info Bio Snippet */}
         <div className="text-center" style={{ transform: 'translateZ(35px)' }}>
-          <h3 className="text-lg sm:text-xl font-bold font-display text-white tracking-wide">
+          <h3 className="text-lg sm:text-xl font-bold font-display text-ink tracking-wide">
             Manish Kumar Narayan
           </h3>
-          <p className="text-[11px] sm:text-sm text-cyan-300/90 font-mono mt-0.5">
+          <p className="text-[11px] sm:text-sm text-ink font-mono mt-0.5">
             Frontend Engineer & CS Student
           </p>
 
-          <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-white/10 flex justify-around text-center">
+          <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-ink/10 flex justify-around text-center">
             <div>
-              <div className="text-sm sm:text-base font-bold text-white font-display">Real-Time</div>
-              <div className="text-[10px] sm:text-[11px] text-slate-400">Architecture</div>
+              <div className="text-sm sm:text-base font-bold text-ink font-display">Real-Time</div>
+              <div className="text-[10px] sm:text-[11px] text-slate-600">Architecture</div>
             </div>
-            <div className="w-[1px] h-7 sm:h-8 bg-white/10" />
+            <div className="w-[1px] h-7 sm:h-8 bg-ink/10" />
             <div>
-              <div className="text-sm sm:text-base font-bold text-amber-300 font-display">3D & UX</div>
-              <div className="text-[10px] sm:text-[11px] text-slate-400">Interactivity</div>
+              <div className="text-sm sm:text-base font-bold text-ink font-display">3D & UX</div>
+              <div className="text-[10px] sm:text-[11px] text-slate-600">Interactivity</div>
             </div>
-            <div className="w-[1px] h-7 sm:h-8 bg-white/10" />
+            <div className="w-[1px] h-7 sm:h-8 bg-ink/10" />
             <div>
-              <div className="text-sm sm:text-base font-bold text-emerald-300 font-display">Clean</div>
-              <div className="text-[10px] sm:text-[11px] text-slate-400">Codebase</div>
+              <div className="text-sm sm:text-base font-bold text-ink font-display">Clean</div>
+              <div className="text-[10px] sm:text-[11px] text-slate-600">Codebase</div>
             </div>
           </div>
         </div>

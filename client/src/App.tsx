@@ -56,9 +56,9 @@ export function App() {
   }[currentTheme];
 
   return (
-    <div className="relative min-h-screen text-slate-100 bg-[#070B0E] selection:bg-cyan-400 selection:text-black overflow-x-hidden">
+    <div className="relative min-h-screen text-ink bg-[#F6F7F9] selection:bg-cyan-400 selection:text-black overflow-x-hidden">
       {/* Scroll Progress Bar */}
-      <div className="fixed top-0 left-0 right-0 h-[3px] z-50 bg-white/5">
+      <div className="fixed top-0 left-0 right-0 h-[3px] z-50 bg-ink/5">
         <div
           className={`h-full transition-all duration-75 ${themeGlowClass}`}
           style={{ width: `${scrollProgress}%` }}

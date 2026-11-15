@@ -118,7 +118,7 @@ export const Skills: React.FC = () => {
       frontSummary: 'Branch management, code reviews, collaborative open source, and team workflows.',
       details: ['Branching & Merging', 'Collaborative Teamwork', 'GitHub Repositories', 'Open Source Practices'],
       color: 'from-slate-200 to-cyan-300',
-      borderGlow: 'hover:border-white/60 hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]',
+      borderGlow: 'hover:border-ink/60 hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]',
       link: 'https://github.com/manishkumarnarayan',
       linkLabel: 'Visit GitHub Profile',
     },
@@ -161,15 +161,15 @@ export const Skills: React.FC = () => {
 
       {/* Header */}
       <div className="text-center mb-8 sm:mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill border border-cyan-400/30 text-cyan-300 text-xs font-mono mb-3">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-pill border border-cyan-400/30 text-cyan-600 text-xs font-mono mb-3">
           <Code2 className="w-3.5 h-3.5" />
           <span>Core Competencies</span>
         </div>
-        <h2 className="text-2xl xs:text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
+        <h2 className="text-2xl xs:text-3xl sm:text-5xl font-display font-bold text-ink tracking-tight">
           Technical <span className="text-gradient-cyan">Skillset</span> &{' '}
           <span className="text-gradient-emerald">Capabilities</span>
         </h2>
-        <p className="mt-2.5 sm:mt-3 text-slate-300 font-body max-w-2xl mx-auto text-xs sm:text-base leading-relaxed">
+        <p className="mt-2.5 sm:mt-3 text-slate-700 font-body max-w-2xl mx-auto text-xs sm:text-base leading-relaxed">
           Interactive cards: Click or tap any card to flip and discover architectural details and applications.
         </p>
 
@@ -188,7 +188,7 @@ export const Skills: React.FC = () => {
               className={`px-3.5 sm:px-4 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-200 cursor-pointer shrink-0 ${
                 filter === tab.id
                   ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-black shadow-[0_0_15px_rgba(79,209,192,0.4)]'
-                  : 'glass-panel-subtle text-slate-300 hover:text-white hover:bg-white/10'
+                  : 'glass-panel-subtle text-slate-700 hover:text-ink hover:bg-ink/10'
               }`}
             >
               {tab.label}
@@ -216,35 +216,35 @@ export const Skills: React.FC = () => {
               >
                 {/* FRONT FACE */}
                 <div
-                  className={`absolute inset-0 backface-hidden glass-card-interactive p-5 sm:p-6 rounded-2xl border border-white/15 flex flex-col justify-between ${skill.borderGlow}`}
+                  className={`absolute inset-0 backface-hidden glass-card-interactive p-5 sm:p-6 rounded-2xl border border-ink/15 flex flex-col justify-between ${skill.borderGlow}`}
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3 sm:mb-4">
                       <div className={`p-2 sm:p-2.5 rounded-xl bg-gradient-to-tr ${skill.color} text-black shadow-md`}>
                         <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                       </div>
-                      <div className="flex items-center gap-1 text-[10px] sm:text-[11px] font-mono text-slate-400 group-hover:text-cyan-300 transition-colors">
+                      <div className="flex items-center gap-1 text-[10px] sm:text-[11px] font-mono text-slate-600 group-hover:text-cyan-600 transition-colors">
                         <RotateCw className="w-3 h-3 group-hover:rotate-180 transition-transform duration-500" />
                         <span>Flip info</span>
                       </div>
                     </div>
 
-                    <h3 className="text-lg sm:text-xl font-bold font-display text-white group-hover:text-cyan-300 transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold font-display text-ink group-hover:text-cyan-600 transition-colors">
                       {skill.name}
                     </h3>
-                    <p className="text-[11px] sm:text-xs font-mono text-cyan-400/90 mt-0.5">
+                    <p className="text-[11px] sm:text-xs font-mono text-cyan-600/90 mt-0.5">
                       {skill.tagline}
                     </p>
-                    <p className="text-xs text-slate-300 font-body mt-2 sm:mt-3 line-clamp-3 leading-relaxed">
+                    <p className="text-xs text-slate-700 font-body mt-2 sm:mt-3 line-clamp-3 leading-relaxed">
                       {skill.frontSummary}
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-between pt-2.5 sm:pt-3 border-t border-white/10">
-                    <span className="text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-slate-400">
+                  <div className="flex items-center justify-between pt-2.5 sm:pt-3 border-t border-ink/10">
+                    <span className="text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-slate-600">
                       Category: {skill.category}
                     </span>
-                    <span className="text-[10px] sm:text-[11px] font-semibold text-cyan-300 flex items-center gap-1">
+                    <span className="text-[10px] sm:text-[11px] font-semibold text-cyan-600 flex items-center gap-1">
                       Explore details →
                     </span>
                   </div>
@@ -252,20 +252,20 @@ export const Skills: React.FC = () => {
 
                 {/* BACK FACE */}
                 <div
-                  className={`absolute inset-0 backface-hidden rotate-y-180 glass-panel p-5 sm:p-6 rounded-2xl border border-cyan-400/40 shadow-2xl flex flex-col justify-between bg-slate-900/95`}
+                  className={`absolute inset-0 backface-hidden rotate-y-180 glass-panel p-5 sm:p-6 rounded-2xl border border-cyan-400/40 shadow-2xl flex flex-col justify-between bg-white/95`}
                 >
                   <div>
-                    <div className="flex items-center justify-between pb-2 mb-2 sm:mb-3 border-b border-white/10">
-                      <h4 className="text-sm sm:text-base font-bold font-display text-white flex items-center gap-1.5">
-                        <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400" />
+                    <div className="flex items-center justify-between pb-2 mb-2 sm:mb-3 border-b border-ink/10">
+                      <h4 className="text-sm sm:text-base font-bold font-display text-ink flex items-center gap-1.5">
+                        <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-600" />
                         {skill.name}
                       </h4>
-                      <span className="text-[9px] sm:text-[10px] text-slate-400 font-mono">Back to front ↺</span>
+                      <span className="text-[9px] sm:text-[10px] text-slate-600 font-mono">Back to front ↺</span>
                     </div>
 
                     <ul className="space-y-1.5">
                       {skill.details.map((detail, idx) => (
-                        <li key={idx} className="text-xs text-slate-200 flex items-center gap-2">
+                        <li key={idx} className="text-xs text-slate-800 flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
                           <span className="leading-snug">{detail}</span>
                         </li>
@@ -279,13 +279,13 @@ export const Skills: React.FC = () => {
                       target="_blank"
                       rel="noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="mt-2 py-1.5 px-3 rounded-lg text-xs font-semibold bg-white/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-400/30 flex items-center justify-center gap-1.5 transition"
+                      className="mt-2 py-1.5 px-3 rounded-lg text-xs font-semibold bg-ink/10 hover:bg-cyan-500/20 text-cyan-600 border border-cyan-400/30 flex items-center justify-center gap-1.5 transition"
                     >
                       <span>{skill.linkLabel || 'Visit Link'}</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   ) : (
-                    <div className="text-[10px] sm:text-[11px] font-mono text-emerald-400 pt-2 border-t border-white/10">
+                    <div className="text-[10px] sm:text-[11px] font-mono text-emerald-600 pt-2 border-t border-ink/10">
                       ✓ Actively utilized in real projects
                     </div>
                   )}
@@ -297,7 +297,7 @@ export const Skills: React.FC = () => {
       </div>
 
       <div className="mt-12 text-center">
-        <p className="text-xs sm:text-sm font-body text-slate-400 max-w-xl mx-auto">
+        <p className="text-xs sm:text-sm font-body text-slate-600 max-w-xl mx-auto">
           "Constantly evolving and mastering new frameworks, libraries, and AI technologies to build higher-fidelity web applications."
         </p>
       </div>

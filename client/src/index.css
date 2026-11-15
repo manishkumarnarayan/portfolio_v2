@@ -3,53 +3,64 @@
 /*
   Design tokens
   Tailwind's cyan / amber / emerald / blue / orange / teal ramps are re-pointed
-  to a calmer palette so every existing utility class picks it up:
+  to a calmer palette (600 = text-safe on light) so every existing utility class picks it up:
     cyan    -> deep teal   (primary)
     amber   -> coral       (accent)
     emerald -> sage mint   (success / tertiary)
     blue    -> steel teal  (gradient partner)
 */
 @theme {
-  --font-display: 'Sora Variable', 'Sora', system-ui, sans-serif;
-  --font-body: 'Manrope Variable', 'Manrope', system-ui, sans-serif;
+  --font-display: 'Inter Tight Variable', 'Inter Tight', system-ui, sans-serif;
+  --font-body: 'Inter Variable', 'Inter', system-ui, sans-serif;
   --font-accent: 'Instrument Serif', Georgia, serif;
-  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --color-ink: #0B0F14;
 
+  --color-cyan-100: #DDF6F2;
   --color-cyan-200: #B8EFE7;
   --color-cyan-300: #8FE3D8;
   --color-cyan-400: #4FD1C0;
   --color-cyan-500: #2BB5A4;
-  --color-cyan-600: #1D8F83;
+  --color-cyan-600: #0E7C72;
   --color-cyan-950: #062925;
 
+  --color-teal-100: #DDF6F2;
   --color-teal-400: #4FD1C0;
   --color-teal-500: #2BB5A4;
+  --color-teal-600: #0E7C72;
   --color-teal-950: #062925;
 
+  --color-blue-100: #E1F0F6;
   --color-blue-300: #9ACFE2;
   --color-blue-400: #6DB8D4;
   --color-blue-500: #4B97BA;
   --color-blue-600: #33789B;
   --color-blue-950: #0A2230;
 
+  --color-amber-100: #FFE9E3;
   --color-amber-300: #FFB7A5;
   --color-amber-400: #FF9580;
   --color-amber-500: #F7735C;
+  --color-amber-600: #C2452F;
   --color-amber-950: #3A1710;
 
+  --color-orange-100: #FFE9E3;
   --color-orange-400: #FF9580;
   --color-orange-500: #F7735C;
+  --color-orange-600: #C2452F;
   --color-orange-950: #3A1710;
 
+  --color-emerald-100: #E3F6EC;
   --color-emerald-300: #BDEBD3;
   --color-emerald-400: #93DDB9;
   --color-emerald-500: #63C597;
+  --color-emerald-600: #1E7F55;
   --color-emerald-950: #0B2A1D;
 }
 
 @layer base {
   :root {
-    --bg-base: #070B0E;
+    --bg-base: #F6F7F9;
     --teal-glow: #4FD1C0;
     --coral-glow: #FF9580;
     --sage-glow: #93DDB9;
@@ -57,7 +68,7 @@
 
   body {
     background-color: var(--bg-base);
-    color: #F1F5F9;
+    color: var(--color-ink);
     font-family: var(--font-body);
     overflow-x: hidden;
     -webkit-tap-highlight-color: transparent;
@@ -91,42 +102,42 @@
   letter-spacing: 0.01em;
 }
 
-/* Glassmorphism Core Utilities */
+/* Glassmorphism Core Utilities (light surfaces) */
 .glass-panel {
-  background: rgba(11, 21, 24, 0.65);
+  background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.6), inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(11, 15, 20, 0.08);
+  box-shadow: 0 12px 40px -14px rgba(11, 15, 20, 0.18), inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .glass-panel-subtle {
-  background: rgba(14, 26, 30, 0.45);
+  background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(11, 15, 20, 0.06);
 }
 
 .glass-pill {
-  background: rgba(13, 26, 29, 0.75);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(11, 15, 20, 0.09);
+  box-shadow: 0 8px 24px -10px rgba(11, 15, 20, 0.22), inset 0 1px 1px rgba(255, 255, 255, 0.9);
 }
 
 .glass-card-interactive {
-  background: linear-gradient(135deg, rgba(17, 30, 34, 0.75) 0%, rgba(9, 17, 20, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.6) 100%);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 16px 45px -12px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(11, 15, 20, 0.08);
+  box-shadow: 0 16px 45px -16px rgba(11, 15, 20, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.95);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card-interactive:hover {
-  border-color: rgba(79, 209, 192, 0.35);
-  box-shadow: 0 20px 50px -10px rgba(79, 209, 192, 0.18), inset 0 1px 2px rgba(79, 209, 192, 0.3);
+  border-color: rgba(43, 181, 164, 0.5);
+  box-shadow: 0 20px 50px -12px rgba(43, 181, 164, 0.28), inset 0 1px 2px rgba(255, 255, 255, 1);
   transform: translateY(-4px);
 }
 
@@ -149,19 +160,19 @@
 }
 
 .text-gradient-cyan {
-  background: linear-gradient(135deg, #E6FBF7 0%, #4FD1C0 50%, #33789B 100%);
+  background: linear-gradient(135deg, #0B0F14 0%, #0B0F14 55%, #0E7C72 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-amber {
-  background: linear-gradient(135deg, #FFF3EF 0%, #FF9580 50%, #DE5A44 100%);
+  background: linear-gradient(135deg, #0B0F14 0%, #0B0F14 55%, #C2452F 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-emerald {
-  background: linear-gradient(135deg, #EEFBF4 0%, #93DDB9 50%, #3FA67B 100%);
+  background: linear-gradient(135deg, #0B0F14 0%, #0B0F14 55%, #1E7F55 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -190,21 +201,21 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #070B0E;
+  background: #F6F7F9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(79, 209, 192, 0.25);
+  background: rgba(11, 15, 20, 0.22);
   border-radius: 9999px;
-  border: 2px solid #070B0E;
+  border: 2px solid #F6F7F9;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(79, 209, 192, 0.5);
+  background: rgba(11, 15, 20, 0.4);
 }
 
 /* Selection */
 ::selection {
   background: #4FD1C0;
-  color: #070B0E;
+  color: #0B0F14;
 }

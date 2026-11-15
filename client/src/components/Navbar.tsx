@@ -45,8 +45,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, scrollToSection }
       <nav
         className={`w-full max-w-5xl transition-all duration-300 rounded-2xl sm:rounded-full ${
           isScrolled || mobileMenuOpen
-            ? 'glass-panel py-2 px-3.5 sm:py-2.5 sm:px-6 shadow-2xl border border-white/20 bg-slate-950/85 backdrop-blur-xl'
-            : 'glass-panel-subtle py-2.5 px-3.5 sm:py-3 sm:px-6 border border-white/10'
+            ? 'glass-panel py-2 px-3.5 sm:py-2.5 sm:px-6 shadow-2xl border border-ink/20 bg-white/85 backdrop-blur-xl'
+            : 'glass-panel-subtle py-2.5 px-3.5 sm:py-3 sm:px-6 border border-ink/10'
         }`}
       >
         <div className="flex items-center justify-between">
@@ -59,17 +59,17 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, scrollToSection }
               <span className="font-display font-extrabold text-xs sm:text-sm text-black tracking-tight">MN</span>
             </div>
             <div className="block">
-              <span className="font-display font-bold text-xs sm:text-sm tracking-wide text-white group-hover:text-cyan-300 transition-colors block">
+              <span className="font-display font-bold text-xs sm:text-sm tracking-wide text-ink group-hover:text-cyan-600 transition-colors block">
                 Manish Kumar
               </span>
-              <span className="text-[9px] sm:text-[10px] block font-mono text-cyan-400/80 -mt-0.5">
+              <span className="text-[9px] sm:text-[10px] block font-mono text-cyan-600/80 -mt-0.5">
                 Frontend & 3D Web
               </span>
             </div>
           </button>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-1 bg-slate-950/40 p-1 rounded-full border border-white/10">
+          <div className="hidden md:flex items-center gap-1 bg-white/40 p-1 rounded-full border border-ink/10">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
               return (
@@ -78,8 +78,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, scrollToSection }
                   onClick={() => handleNavClick(item.id)}
                   className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer ${
                     isActive
-                      ? 'bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-300 border border-cyan-400/40 shadow-[0_0_12px_rgba(79,209,192,0.25)]'
-                      : 'text-slate-300 hover:text-white hover:bg-white/10'
+                      ? 'bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-600 border border-cyan-400/40 shadow-[0_0_12px_rgba(79,209,192,0.25)]'
+                      : 'text-slate-700 hover:text-ink hover:bg-ink/10'
                   }`}
                 >
                   {item.label}
@@ -94,7 +94,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, scrollToSection }
               href="https://github.com/manishkumarnarayan"
               target="_blank"
               rel="noreferrer"
-              className="p-2 rounded-full glass-pill hover:border-cyan-400/60 text-slate-300 hover:text-white transition-all hover:scale-110"
+              className="p-2 rounded-full glass-pill hover:border-cyan-400/60 text-slate-700 hover:text-ink transition-all hover:scale-110"
               aria-label="GitHub Profile"
             >
               <GithubIcon className="w-4 h-4" />
@@ -103,7 +103,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, scrollToSection }
               href="https://www.linkedin.com/in/manish-kumar-341b81421"
               target="_blank"
               rel="noreferrer"
-              className="p-2 rounded-full glass-pill hover:border-cyan-400/60 text-slate-300 hover:text-white transition-all hover:scale-110"
+              className="p-2 rounded-full glass-pill hover:border-cyan-400/60 text-slate-700 hover:text-ink transition-all hover:scale-110"
               aria-label="LinkedIn Profile"
             >
               <LinkedinIcon className="w-4 h-4" />
@@ -127,17 +127,17 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, scrollToSection }
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl glass-pill text-slate-200 hover:text-white cursor-pointer active:scale-95 transition"
+              className="p-2 rounded-xl glass-pill text-slate-800 hover:text-ink cursor-pointer active:scale-95 transition"
               aria-label="Toggle mobile menu"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5 text-cyan-300" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-5 h-5 text-cyan-600" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-3 pt-3 border-t border-white/15 flex flex-col gap-1.5 animate-in fade-in slide-in-from-top-2 duration-200">
+          <div className="md:hidden mt-3 pt-3 border-t border-ink/15 flex flex-col gap-1.5 animate-in fade-in slide-in-from-top-2 duration-200">
             {navItems.map((item) => {
               const isActive = activeSection === item.id;
               return (
@@ -146,8 +146,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, scrollToSection }
                   onClick={() => handleNavClick(item.id)}
                   className={`w-full text-left px-4 py-2.5 rounded-xl text-sm font-medium transition flex items-center justify-between cursor-pointer ${
                     isActive
-                      ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400/40 font-semibold'
-                      : 'text-slate-200 hover:bg-white/10 hover:text-white'
+                      ? 'bg-cyan-500/20 text-cyan-600 border border-cyan-400/40 font-semibold'
+                      : 'text-slate-800 hover:bg-ink/10 hover:text-ink'
                   }`}
                 >
                   <span>{item.label}</span>
@@ -157,12 +157,12 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, scrollToSection }
                 </button>
               );
             })}
-            <div className="flex items-center justify-around gap-2 pt-3 mt-1 border-t border-white/10 px-1">
+            <div className="flex items-center justify-around gap-2 pt-3 mt-1 border-t border-ink/10 px-1">
               <a
                 href="https://github.com/manishkumarnarayan"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 py-2 px-3 rounded-lg text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-white/5 transition"
+                className="flex items-center gap-1.5 py-2 px-3 rounded-lg text-xs font-medium text-slate-700 hover:text-cyan-600 hover:bg-ink/5 transition"
               >
                 <GithubIcon className="w-4 h-4" /> GitHub
               </a>
@@ -170,13 +170,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, scrollToSection }
                 href="https://www.linkedin.com/in/manish-kumar-341b81421"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 py-2 px-3 rounded-lg text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-white/5 transition"
+                className="flex items-center gap-1.5 py-2 px-3 rounded-lg text-xs font-medium text-slate-700 hover:text-cyan-600 hover:bg-ink/5 transition"
               >
                 <LinkedinIcon className="w-4 h-4" /> LinkedIn
               </a>
               <a
                 href="mailto:manishkumarnarayan2007@gmail.com"
-                className="flex items-center gap-1.5 py-2 px-3 rounded-lg text-xs font-medium text-slate-300 hover:text-cyan-400 hover:bg-white/5 transition"
+                className="flex items-center gap-1.5 py-2 px-3 rounded-lg text-xs font-medium text-slate-700 hover:text-cyan-600 hover:bg-ink/5 transition"
               >
                 <Mail className="w-4 h-4" /> Email
               </a>
