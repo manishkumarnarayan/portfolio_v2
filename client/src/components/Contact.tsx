@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import confetti from 'canvas-confetti';
 import { 
   Mail, 
-  Send, 
   CheckCircle2, 
   Copy, 
   Check, 
@@ -13,14 +11,6 @@ import {
 import { GithubIcon, LinkedinIcon, InstagramIcon } from './SocialIcons';
 
 export const Contact: React.FC = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const myEmail = 'manishkumarnarayan2007@gmail.com';
@@ -29,38 +19,6 @@ export const Contact: React.FC = () => {
     navigator.clipboard.writeText(myEmail);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2500);
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!name.trim() || !email.trim() || !subject || !message.trim()) {
-      setErrorMsg('Please fill in your name, email, subject, and message.');
-      return;
-    }
-
-    setErrorMsg('');
-    setIsSubmitting(true);
-
-    // Simulate submission with celebratory confetti
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-
-      // Trigger Confetti effect with luminous cyan and solar gold colors
-      confetti({
-        particleCount: 80,
-        spread: 70,
-        origin: { y: 0.6 },
-        colors: ['#4FD1C0', '#FF9580', '#93DDB9', '#0B0F14', '#6DB8D4'],
-      });
-
-      // Clear fields
-      setName('');
-      setEmail('');
-      setPhone('');
-      setSubject('');
-      setMessage('');
-    }, 800);
   };
 
   return (
@@ -78,13 +36,13 @@ export const Contact: React.FC = () => {
           Let's Build Something <span className="text-gradient-cyan">Extraordinary</span>
         </h2>
         <p className="mt-2.5 sm:mt-3 text-slate-700 font-body max-w-xl mx-auto text-xs sm:text-base leading-relaxed">
-          Have an exciting project, internship opportunity, or freelance inquiry? Send a message or connect directly.
+          Have an exciting project, internship opportunity, or freelance inquiry? Connect with me directly by email or on social media.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-stretch">
-        {/* Left Column: Direct Info & Social Cards */}
-        <div className="lg:col-span-5 flex flex-col justify-between gap-5 sm:gap-6">
+      <div className="max-w-2xl mx-auto">
+        {/* Direct Info & Social Cards */}
+        <div className="flex flex-col gap-5 sm:gap-6">
           <div className="glass-card-interactive p-5 sm:p-8 rounded-3xl border border-ink/15 shadow-2xl">
             <h3 className="text-lg sm:text-xl font-bold font-display text-ink mb-2 flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-amber-600" />
@@ -176,123 +134,6 @@ export const Contact: React.FC = () => {
               <span className="text-[11px] sm:text-xs font-semibold text-ink group-hover:text-amber-600">Instagram</span>
             </a>
           </div>
-        </div>
-
-        {/* Right Column: Contact Form */}
-        <div className="lg:col-span-7 glass-panel p-5 sm:p-8 rounded-3xl border border-ink/15 shadow-2xl relative">
-          <h3 className="text-lg sm:text-xl font-bold font-display text-ink mb-4 sm:mb-6">
-            Send a Message
-          </h3>
-
-          {submitted ? (
-            <div className="py-10 sm:py-12 flex flex-col items-center text-center animate-in zoom-in-95 duration-300">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500/20 border border-emerald-400/50 flex items-center justify-center text-emerald-600 mb-4 shadow-[0_0_20px_#93DDB9]">
-                <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8" />
-              </div>
-              <h4 className="text-xl sm:text-2xl font-bold font-display text-ink mb-2">Message Sent!</h4>
-              <p className="text-xs sm:text-sm text-slate-700 font-body max-w-sm mb-6">
-                Thank you for reaching out, Manish will get back to you shortly.
-              </p>
-              <button
-                onClick={() => setSubmitted(false)}
-                className="px-5 py-2.5 rounded-xl text-xs font-semibold glass-pill border border-cyan-400/40 text-cyan-600 hover:bg-cyan-500/20 transition cursor-pointer"
-              >
-                Send Another Message
-              </button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-4">
-              {errorMsg && (
-                <div className="p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs">
-                  {errorMsg}
-                </div>
-              )}
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
-                <div>
-                  <label className="block text-xs font-mono text-slate-700 mb-1.5">Your Name *</label>
-                  <input
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="e.g. Alex Smith"
-                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-2.5 rounded-xl bg-white/70 border border-ink/15 text-ink placeholder-slate-500 text-base sm:text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-mono text-slate-700 mb-1.5">Your Email *</label>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="e.g. alex@company.com"
-                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-2.5 rounded-xl bg-white/70 border border-ink/15 text-ink placeholder-slate-500 text-base sm:text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
-                <div>
-                  <label className="block text-xs font-mono text-slate-700 mb-1.5">Phone (Optional)</label>
-                  <div className="relative">
-                    <input
-                      type="tel"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      placeholder="+1 (555) 000-0000"
-                      className="w-full px-3.5 sm:px-4 py-2.5 sm:py-2.5 rounded-xl bg-white/70 border border-ink/15 text-ink placeholder-slate-500 text-base sm:text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-mono text-slate-700 mb-1.5">Subject *</label>
-                  <select
-                    value={subject}
-                    onChange={(e) => setSubject(e.target.value)}
-                    className="w-full px-3.5 sm:px-4 py-2.5 sm:py-2.5 rounded-xl bg-white/90 border border-ink/15 text-ink text-base sm:text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition"
-                  >
-                    <option value="" className="bg-white text-slate-600">Select a subject</option>
-                    <option value="job" className="bg-white text-ink">Full-Time / Part-Time Job Offer</option>
-                    <option value="internship" className="bg-white text-ink">Internship Opportunity</option>
-                    <option value="freelance" className="bg-white text-ink">Hire for Freelance Project</option>
-                    <option value="collaboration" className="bg-white text-ink">Project Collaboration</option>
-                    <option value="other" className="bg-white text-ink">General Inquiry</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-xs font-mono text-slate-700 mb-1.5">Message *</label>
-                <textarea
-                  rows={4}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Tell me about your project, timeline, or idea..."
-                  className="w-full px-3.5 sm:px-4 py-2.5 sm:py-2.5 rounded-xl bg-white/70 border border-ink/15 text-ink placeholder-slate-500 text-base sm:text-sm focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition resize-none"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full py-3.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-cyan-400 via-teal-400 to-blue-500 text-black shadow-[0_0_20px_rgba(79,209,192,0.4)] hover:brightness-110 active:scale-[0.99] transition flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 min-h-[46px]"
-              >
-                {isSubmitting ? (
-                  <span className="flex items-center gap-2">
-                    <span className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin" />
-                    Sending Message...
-                  </span>
-                ) : (
-                  <>
-                    <Send className="w-4 h-4" />
-                    <span>Send Message</span>
-                  </>
-                )}
-              </button>
-            </form>
-          )}
         </div>
       </div>
     </section>
